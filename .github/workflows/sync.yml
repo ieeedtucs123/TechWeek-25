@@ -1,0 +1,39 @@
+name: Sync from Main Repo
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # runs every hour
+  workflow_dispatch:      # allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      HAS_SECRET: ${{ secrets.DEPLOY_SECRET }}
+
+    steps:
+      - name: Check secret exists
+        if: ${{ env.HAS_SECRET == '' }}
+        run: |
+          echo "❌ DEPLOY_SECRET not set — skipping sync."
+          exit 0
+
+      - name: Checkout fork
+        if: ${{ env.HAS_SECRET != '' }}
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.DEPLOY_SECRET }}
+          fetch-depth: 0
+
+      - name: Add upstream remote
+        if: ${{ env.HAS_SECRET != '' }}
+        run: |
+          git remote add upstream https://github.com/IEEEDTUCS/TechWeek-25
+          git fetch upstream
+
+      - name: Force sync with upstream
+        if: ${{ env.HAS_SECRET != '' }}
+        run: |
+          git checkout main
+          git reset --hard upstream/main
+          git push origin main --force
