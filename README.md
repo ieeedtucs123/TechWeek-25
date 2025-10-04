@@ -23,6 +23,7 @@ Open [http://localhost:5173](http://localhost:5173) with your browser to see the
 
 Now push your changes to a seperate branch and create a pull request for the main branch.
 
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
