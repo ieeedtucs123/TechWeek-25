@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Sigs() {
+export default function sigs() {
   return (
     <div>sigs</div>
   )
