@@ -1,0 +1,45 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  overflow: hidden;
+}
+
+.question {
+  width: 100%;
+  background: #fff;
+  color: #222;
+  font-size: 1rem;
+  padding: 0.9rem 1rem;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+.open {
+  max-height: 200px;
+  padding: 0.8rem 1rem;
+}
