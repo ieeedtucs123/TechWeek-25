@@ -30,7 +30,7 @@ function App() {
         <FAQs></FAQs>
       </div>
       <div id="Contact">
-        <Footer></Footer>
+        <Footer/>
       </div>
     </div>
   )

@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}", // all React source files
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        grotesk: ['"Space Grotesk"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
