@@ -6,7 +6,7 @@ import insta from "../assets/instagram.svg";
 
 export default function Footer() {
   return (
-    <footer className="w-full">
+    <footer className="w-full font-grotesk">
       <div className="bg-[#111216] p-8 md:p-12 text-gray-200 shadow-lg w-full">
         
         <div className="flex items-center justify-between mb-8">
