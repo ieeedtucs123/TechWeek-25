@@ -5,3 +5,22 @@
 html {
   scroll-behavior: smooth;
 }
+/* Add this to your index.css or App.css file */
+
+.book-wrapper {
+  /* Creates the 3D space for the animation */
+  perspective: 2500px;
+}
+
+.static-cover-flipper {
+  /* Flips the cover on its left edge (the spine) */
+  transform-origin: left;
+  transition: transform 1.2s ease-in-out;
+  /* Hides the back of the element as it flips */
+  backface-visibility: hidden;
+}
+
+.static-cover-flipper.open {
+  /* The actual flip animation */
+  transform: rotateY(-180deg);
+}
