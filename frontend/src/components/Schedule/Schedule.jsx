@@ -3,7 +3,7 @@ import Arrow4 from '/Arrow 4.svg';
 import Arrow5 from '/Arrow 5.svg';
 export default function Schedule() {
   return (
-    <div className="w-full bg-white py-12 px-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+    <div className="w-full font-grotesk bg-white py-28 px-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
       {/* Header */}
       <div className="max-w-6xl mx-auto mb-16">
         <h2 
@@ -32,7 +32,7 @@ export default function Schedule() {
       </div>
 
       {/* Timeline Container */}
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl font-grotesk mx-auto">
                     
         {/* Event 1 - Left Side */}
         <div className="flex items-center w-full">
@@ -65,7 +65,7 @@ export default function Schedule() {
       </div>
 
         {/* Event 2 - Right Side */}
-        <div className="flex items-center justify-between mb-0">
+        <div className="flex font-grotesk items-center justify-between mb-0">
           <div className="w-3/5">
             <img src={Arrow5} className="lg:w-[370px] lg:pt-10 md:w-[300px] md:pt-12 sm:w-[240px] sm:pt-11 w-[150px] pt-[70px] ml-auto"/>
             
@@ -90,7 +90,7 @@ export default function Schedule() {
         </div>
 
         {/* Event 3 - Left Side */}
-        <div className="flex items-center mb-0">
+        <div className="flex font-grotesk items-center mb-0">
           <div className="lg:w-[450px]">
             <div className="bg-[#B9FF66] border-2 border-[#191A23] rounded-3xl px-6 py-4 inline-block lg:w-[450px] ;lg:h-[150px] md:w-[330px]">
               <div className="mb-3">
@@ -116,7 +116,7 @@ export default function Schedule() {
         </div>
 
         {/* Event 4 - Right Side */}
-        <div className="flex items-center justify-between mb-0">
+        <div className="flex font-grotesk items-center justify-between mb-0">
           <div className="w-[652px]">
             <img src={Arrow5} className="lg:w-[450px] lg:h-[150px] lg:pt-11 md:w-[360px] md:pt-12 justify-end ml-auto"/>
             
@@ -143,7 +143,7 @@ export default function Schedule() {
         </div>
 
         {/* Event 5 - Left Side */}
-        <div className="flex items-center mb-0">
+        <div className="flex font-grotesk items-center mb-0">
           <div className="lg:w-[450px]">
             <div className="bg-[#B9FF66] border-2 border-[#191A23] rounded-3xl px-6 py-4 inline-block lg:w-[450px] ;lg:h-[150px] md:w-[330px]">
               <div className="mb-3">
@@ -169,7 +169,7 @@ export default function Schedule() {
         </div>
 
         {/* Event 6 - Right Side */}
-        <div className="flex items-center justify-between mb-0">
+        <div className="flex font-grotesk items-center justify-between mb-0">
           <div className="w-[652px]">
             <img src={Arrow5} className="lg:w-[450px] lg:h-[150px] lg:pt-11 md:w-[360px] md:pt-12 justify-end ml-auto"/>
             

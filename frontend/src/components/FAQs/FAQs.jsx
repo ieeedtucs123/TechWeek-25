@@ -30,11 +30,10 @@ export default function Faq() {
         <div className="mb-8 sm:mb-12">
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 mb-4">
             <span className="inline-block bg-[#B9FF66] text-[#191A23] font-bold px-6 py-3 rounded-md text-2xl sm:text-3xl mb-3 sm:mb-0 w-fit">
-              About Us
+              FAQs
             </span>
             <p className="text-[#191A23] text-sm sm:text-base">
-              A week packed with friendly, hands-on workshops on AI, ML, DSA,
-              Design, and more. No prerequisites, just curiosity!
+              Got a question? Here are answers to some common queries to help you get ready for an amazing week of learning and innovation.
             </p>
           </div>
         </div>
