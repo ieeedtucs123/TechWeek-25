@@ -10,3 +10,23 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Add this to your main CSS file, e.g., index.css */
+
+.book-container {
+  /* This creates the custom shape with rounded corners and a curved bottom spine */
+  clip-path: polygon(
+    15px 0,
+    calc(100% - 15px) 0,
+    100% 15px,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    50% 95%, /* This creates the dip in the middle of the spine */
+    15px 100%,
+    0 calc(100% - 15px),
+    0 15px
+  );
+  
+  /* A subtle shadow to lift the book off the page */
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
+}

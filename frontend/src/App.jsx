@@ -1,5 +1,6 @@
 import './App.css'
 import Landing from './components/Landing.jsx'
+import Sponsor from './components/Sponsors/Sponsor.jsx'
 import Navbar from './utils/Navbar.jsx'
 import Footer from './utils/Footer.jsx'
 import About from './components/About/About.jsx'
@@ -16,6 +17,7 @@ function App() {
       </div>
       <div id="Landing">
         <Landing></Landing>
+        <Sponsor></Sponsor>
       </div>
       <div id="About">
         <About></About>
