@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
 import { useInView } from "react-intersection-observer"; // You may need to install this: npm install react-intersection-observer
-import dsa from "../../assets/dsa.jpg"
-import ML from "../../assets/ML.jpg"
-import design from "../../assets/design.jpg"
-import CP from "../../assets/CP.jpg"
-import electronics from "../../assets/electronics.jpg"
-import genAI from "../../assets/genAI.jpg"
-import nontech from "../../assets/nontech.jpg"
-import development from "../../assets/development.jpg"
-import robotics from "../../assets/robotics.jpg"
+import dsa from "../../../public/dsa.jpg"
+import ML from "../../../public/ML.jpg"
+import design from "../../../public/design.jpg"
+import CP from "../../../public/CP.jpg"
+import electronics from "../../../public/electronics.jpg"
+import genAI from "../../../public/genAI.jpg"
+import nontech from "../../../public/nontech.jpg"
+import development from "../../../public/development.jpg"
+import robotics from "../../../public/robotics.jpg"
 import bgImage from "../../../public/page.svg"
 import cover from "../../../public/cover.svg"
 // A reusable Page component for the main content.
