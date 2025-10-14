@@ -1,10 +1,11 @@
 import React from "react";
+import Sponsor from "./Sponsors/Sponsor";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="w-full h-screen flex items-center justify-center bg-white relative overflow-hidden fontmain pt-20 sm:pt-24 lg:pt-28">
+      <section className="w-full font-grotesk h-screen flex flex-row items-center justify-center bg-white relative overflow-hidden fontmain pt-20 sm:pt-24 lg:pt-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
           <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-6 lg:gap-12 h-full">
             {/* Left Content */}
@@ -28,7 +29,7 @@ export default function Home() {
                 technologies. Join us and become a tech trailblazer!
               </p>
 
-              <a href="/contact" className="mt-4 w-full sm:w-auto">
+              <a href="https://ieeedtu.in" target="blank" className="mt-4 w-full sm:w-auto">
                 <button className="w-full sm:w-auto px-5 sm:px-6 py-2 sm:py-3 bg-gray-900 text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-black transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
                   Register Now
                 </button>
@@ -44,9 +45,11 @@ export default function Home() {
               />
             </div>
           </div>
+          {/* <div><Sponsor></Sponsor></div> */}
         </div>
+        
       </section>
-
+      
       <style jsx>{`
         @keyframes float {
           0%, 100% {

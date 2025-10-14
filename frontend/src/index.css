@@ -8,22 +8,22 @@
 html {
   scroll-behavior: smooth;
 }
-/* Add this to your index.css or App.css file */
 
-.book-wrapper {
-  /* Creates the 3D space for the animation */
-  perspective: 2500px;
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-.static-cover-flipper {
-  /* Flips the cover on its left edge (the spine) */
-  transform-origin: left;
-  transition: transform 1.2s ease-in-out;
-  /* Hides the back of the element as it flips */
-  backface-visibility: hidden;
+.animate-scroll {
+  animation: scroll 10s linear infinite;
 }
 
-.static-cover-flipper.open {
-  /* The actual flip animation */
-  transform: rotateY(-180deg);
+@media (hover: hover) and (pointer: fine) {
+  .group:hover .group-hover\:pause {
+    animation-play-state: paused;
+  }
 }

@@ -46,16 +46,11 @@ const Page = React.forwardRef(({ sigName, description, imageUrl, style }, ref) =
           </div>
         )}
       </div>
-
-      {/* Bottom section: Buttons (Pushed to the bottom by the flex-grow above) */}
-      <div className="pt-6 flex flex-col gap-3">
-        <button className="w-full bg-[#B9FF66] text-gray-900 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-lime-400 transition-colors">
-          Join Group
-        </button>
-        <button className="w-full bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors">
-          Get Notified
-        </button>
+      <div className="mt-auto flex flex-row gap-3">
+        <button className="w-full bg-[#B9FF66] text-gray-900 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-lime-400">Join Group</button>
+        <button className="w-full bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300">Get Notified</button>
       </div>
+      
     </div>
   );
 });
@@ -179,27 +174,25 @@ export default function Sigs() {
   return (
     <><div className="max-w-6xl mx-auto font-grotesk">
       {/* Header */}
-      <div className="mb-8 sm:mb-12">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 mb-4">
-          <span className="inline-block bg-[#B9FF66] text-[#191A23] font-bold px-6 py-3 rounded-md text-2xl sm:text-3xl mb-3 sm:mb-0 w-fit">
+      <div className="my-10 pt-24 sm:mb-12 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+          <span className="inline-block mb-5 bg-[#B9FF66] text-[#191A23] font-bold px-6 py-3 rounded-md text-2xl sm:text-3xl  sm:mb-0 w-fit">
             About SIGs
           </span>
           <p className="text-[#191A23] text-sm sm:text-base">
-            A week packed with friendly, hands-on workshops on AI, ML, DSA,
-            Design, and more. No prerequisites, just curiosity!
+            Explore diverse tech domains like ML, Web Dev, DSA, AI with practical demonstration and hands on experience
           </p>
         </div>
       </div>
     </div>
-    <div className="min-h-screen w-full flex items-center justify-center p-4 sm:p-8 font-grotesk" ref={viewRef}>
+    <div className="h-fit w-full flex items-center justify-center p-8 sm:p-8 font-grotesk" ref={viewRef}>
 
         {/* This is the single wrapper div. It has the ref for sizing and the box-shadow for the border.
       The HTMLFlipBook is its DIRECT child, which is why this works.
     */}
        <div
           ref={bookWrapperRef}
-          className="w-full max-w-5xl h-full flex justify-center items-center shadow-[0_0_0_8px_#B9FF66,0_0_0_10px_#000] rounded-2xl"
-          style={{ height: size.height > 0 ? size.height : 'auto' }}
+          className="w-full max-w-5xl h-[70vh] md:h-auto flex justify-center items-center shadow-[0_0_0_8px_#B9FF66,0_0_0_10px_#000] rounded-2xl"
         >
           {size.width > 0 && (
             <HTMLFlipBook

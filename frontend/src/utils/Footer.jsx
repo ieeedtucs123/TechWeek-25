@@ -6,7 +6,7 @@ import insta from "../assets/instagram.svg";
 
 export default function Footer() {
   return (
-    <footer className="w-full">
+    <footer className="w-full font-grotesk">
       <div className="bg-[#111216] p-8 md:p-12 text-gray-200 shadow-lg w-full">
         
         <div className="flex items-center justify-between mb-8">
@@ -47,10 +47,10 @@ export default function Footer() {
 
             <div className="mt-6 space-y-4 text-gray-300 text-sm">
               <div>
-                <div className="text-sm">Email: <a href="mailto:contact@ieeedtu.in" className="text-gray-100">contact@ieeedtu.in</a></div>
+                <div className="text-sm">Email: <a href="mailto:ieeedtucs123@gmail.com" className="text-gray-100">ieeedtucs123@gmail.com</a></div>
               </div>
 
-              <div>Phone: <span className="text-gray-100">099585 40744</span></div>
+              {/* <div>Phone: <span className="text-gray-100">099585 40744</span></div> */}
               <div className="text-sm">IEEE DTU Website: <a href="https://www.ieeedtu.in/" className="underline hover:text-white text-gray-300"> ieeedtu.in</a></div>
 
               <div>

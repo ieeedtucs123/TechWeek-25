@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+// No need to import useNavigate since we are linking to an external site.
 
 export default function About() {
+    const handleReload = () => {
+    window.location.reload();
+  };
+
   return (
-    <section className="bg-white py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 font-grotesk">
+    <section className="bg-white sm:py-12 lg:py-24 px-4 sm:px-6 lg:px-8 mt-24 font-grotesk">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-8 sm:mb-12">
@@ -42,8 +47,14 @@ export default function About() {
               students, dedicated to fostering a culture of technical excellence 
               and collaborative innovation.
             </p>
-
-            <button className="flex items-center gap-3 bg-transparent text-[#191A23] px-0 py-2 hover:opacity-80 transition-opacity mt-auto">
+            
+            {/* ✅ FIX: Use an <a> tag for the external link */}
+            <a 
+              href="http://ieeedtu.in" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-3 bg-transparent text-[#191A23] px-0 py-2 hover:opacity-80 transition-opacity mt-auto"
+            >
               <div className="relative w-10 h-10 flex items-center justify-center">
                 <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute">
                   <circle cx="20.5" cy="20.5" r="20.5" fill="#191A23"/>
@@ -53,7 +64,7 @@ export default function About() {
                 </svg>
               </div>
               <span className="text-base font-medium">Learn more</span>
-            </button>
+            </a>
           </div>
 
           {/* TECHWEEK Card */}
@@ -79,7 +90,7 @@ export default function About() {
               questions, explore their interests, and discover their passion.
             </p>
 
-            <button className="flex items-center gap-3 bg-transparent text-[#191A23] px-0 py-2 hover:opacity-80 transition-opacity mt-auto">
+            <button onClick={handleReload} className="flex items-center gap-3 bg-transparent text-[#191A23] px-0 py-2 hover:opacity-80 transition-opacity mt-auto">
               <div className="relative w-10 h-10 flex items-center justify-center">
                 <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute">
                   <circle cx="20.5" cy="20.5" r="20.5" fill="#191A23"/>
