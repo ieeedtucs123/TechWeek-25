@@ -76,7 +76,7 @@ export default function Navbar() {
             ))}
             <div className="pt-5">
               <button className="w-full px-8 py-3 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 font-semibold text-base">
-                Request a quote
+                Get Notified
               </button>
             </div>
           </div>

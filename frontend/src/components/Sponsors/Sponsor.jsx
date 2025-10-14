@@ -24,7 +24,7 @@ export default function Sponsor() {
                 {/* This is the container that hides the overflow */}
                 <div className="group w-full overflow-hidden">
                     <div 
-                        className="flex items-center gap-60 animate-scroll group-hover:pause"
+                        className="flex items-center gap-20 md:gap-60 sm:gap-20 animate-scroll group-hover:pause"
                     >
                         {/* ## 2. The loop is now perfect because it's CSS-driven ## */}
                         {logos}
@@ -34,8 +34,3 @@ export default function Sponsor() {
         </section>
     );
 }
-
-// Custom Tailwind utility to pause animation (add to your global CSS if needed)
-// .group:hover .group-hover\:pause {
-//   animation-play-state: paused;
-// }
