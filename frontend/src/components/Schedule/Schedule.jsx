@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Arrow4 from '/Arrow 4.svg';
 import Arrow5 from '/Arrow 5.svg';
 export default function Schedule() {
@@ -26,17 +26,17 @@ export default function Schedule() {
 
           {/* --- Left Column: The Card --- */}
           <div className="w-2/5 flex justify-end">
-            <div className="w-full max-w-md h-[100px] lg:h-[135.2px]">
+            <div className="w-full max-w-sm h-[100px] lg:h-[135.2px]">
               <div className="bg-[#F3F3F3] border-2 border-[#191A23] rounded-3xl px-6 py-4 sm:py-5 md:py-6">
                 <div className="mb-3">
                   <span 
-                    className="inline-block px-2 font-medium bg-[#B9FF66] text-black text-[15px] sm:text-2xl md:text-3xl leading-tight">
+                    className="inline-block px-2 font-medium bg-[#B9FF66] text-black text-[15px] sm:text-2xl md:text-2xl leading-tight">
                     SIG 1 NAME
                   </span>
                 </div>
                 <div>
                   <span 
-                    className="inline-block px-2 font-medium bg-[#B9FF66] text-black text-[15px] sm:text-2xl md:text-3xl  leading-tight">
+                    className="inline-block px-2 font-medium bg-[#B9FF66] text-black text-[15px] sm:text-2xl md:text-2xl leading-tight">
                     DATE AND DAY
                   </span>
                 </div>
@@ -45,7 +45,7 @@ export default function Schedule() {
           </div>
 
         {/* --- Right Column: The Image --- */}
-        <div className="h-[97.88px] lg:w-[370px] md:w-[300px] sm:w-[240px] w-[150px] h-[35.8px]">
+        <div className="h-[97.88px] lg:w-[370px] md:w-[300px] sm:w-[240px] w-[150px] ">
           <img src={Arrow4} alt="Timeline Connector" className="w-full h-auto relative translate-y-[69px] lg:translate-y-[20px] lg:translate-x-[0px] md:translate-y-[40px] sm:translate-y-[47px]" />
         </div>
 
@@ -62,13 +62,13 @@ export default function Schedule() {
             <div className="bg-[#B9FF66] border-2 border-[#191A23] rounded-3xl px-6 py-4 sm:py-5 md:py-6">
               <div className="mb-3">
                 <span 
-                  className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-3xl leading-tight">
+                  className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-2xl leading-tight">
                     SIG 2 NAME
                 </span>
               </div>
               <div>
                 <span 
-                  className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-3xl leading-tight">
+                  className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-2xl leading-tight">
                     DATE AND DAY
                 </span>
               </div>
@@ -81,17 +81,17 @@ export default function Schedule() {
 
           {/* --- Left Column: The Card --- */}
           <div className="w-2/5 flex justify-end">
-            <div className="w-full max-w-md h-[100px] lg:h-[135.2px]">
+            <div className="w-full max-w-sm h-[100px] lg:h-[135.2px]">
               <div className="bg-[#191A23] border-2 border-[#191A23] rounded-3xl px-6 py-4 sm:py-5 md:py-6">
                 <div className="mb-3">
                   <span 
-                    className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-3xl leading-tight">
+                    className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-2xl leading-tight">
                     SIG 3 NAME
                   </span>
                 </div>
                 <div>
                   <span 
-                    className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-3xl  leading-tight">
+                    className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-2xl  leading-tight">
                     DATE AND DAY
                   </span>
                 </div>
@@ -117,13 +117,13 @@ export default function Schedule() {
             <div className="bg-[#F3F3F3] border-2 border-[#191A23] rounded-3xl px-6 py-4 sm:py-5 md:py-6">
               <div className="mb-3">
                 <span 
-                  className="inline-block px-2 font-medium bg-[#B9FF66] text-black text-[15px] sm:text-2xl md:text-3xl leading-tight">
+                  className="inline-block px-2 font-medium bg-[#B9FF66] text-black text-[15px] sm:text-2xl md:text-2xl leading-tight">
                     SIG 4 NAME
                 </span>
               </div>
               <div>
                 <span 
-                  className="inline-block px-2 font-medium bg-[#B9FF66] text-black text-[15px] sm:text-2xl md:text-3xl leading-tight">
+                  className="inline-block px-2 font-medium bg-[#B9FF66] text-black text-[15px] sm:text-2xl md:text-2xl leading-tight">
                     DATE AND DAY
                 </span>
               </div>
@@ -136,17 +136,17 @@ export default function Schedule() {
 
           {/* --- Left Column: The Card --- */}
           <div className="w-2/5 flex justify-end">
-            <div className="w-full max-w-md h-[100px] lg:h-[135.2px]">
+            <div className="w-full max-w-sm h-[100px] lg:h-[135.2px]">
               <div className="bg-[#B9FF66] border-2 border-[#191A23] rounded-3xl px-6 py-4 sm:py-5 md:py-6">
                 <div className="mb-3">
                   <span 
-                    className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-3xl leading-tight">
+                    className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-2xl leading-tight">
                     SIG 5 NAME
                   </span>
                 </div>
                 <div>
                   <span 
-                    className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-3xl  leading-tight">
+                    className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-2xl  leading-tight">
                     DATE AND DAY
                   </span>
                 </div>
@@ -168,13 +168,13 @@ export default function Schedule() {
             <div className="bg-[#191A23] border-2 border-[#191A23] rounded-3xl px-6 py-4 sm:py-5 md:py-6">
               <div className="mb-3">
                 <span 
-                  className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-3xl leading-tight">
+                  className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-2xl leading-tight">
                     SIG 6 NAME
                 </span>
               </div>
               <div>
                 <span 
-                  className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-3xl leading-tight">
+                  className="inline-block px-2 font-medium bg-[#FFFFFF] text-black text-[15px] sm:text-2xl md:text-2xl leading-tight">
                     DATE AND DAY
                 </span>
               </div>
