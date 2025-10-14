@@ -17,10 +17,11 @@ const Page = React.forwardRef(({ sigName, description, imageUrl }, ref) => {
           <span className="text-gray-400 text-xs">Image Section</span>
         )}
       </div>
-      <div className="mt-auto flex flex-col gap-3">
+      <div className="mt-auto flex flex-row gap-3">
         <button className="w-full bg-[#B9FF66] text-gray-900 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-lime-400">Join Group</button>
         <button className="w-full bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300">Get Notified</button>
       </div>
+      
     </div>
   );
 });
@@ -106,9 +107,9 @@ export default function Sigs() {
   return (
     <><div className="max-w-6xl mx-auto font-grotesk">
       {/* Header */}
-      <div className="my-10 pt-24 sm:mb-12">
+      <div className="my-10 pt-24 sm:mb-12 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
-          <span className="inline-block bg-[#B9FF66] text-[#191A23] font-bold px-6 py-3 rounded-md text-2xl sm:text-3xl  sm:mb-0 w-fit">
+          <span className="inline-block mb-5 bg-[#B9FF66] text-[#191A23] font-bold px-6 py-3 rounded-md text-2xl sm:text-3xl  sm:mb-0 w-fit">
             About SIGs
           </span>
           <p className="text-[#191A23] text-sm sm:text-base">
@@ -117,14 +118,14 @@ export default function Sigs() {
         </div>
       </div>
     </div>
-    <div className="min-h-[80%] w-full flex items-center justify-center sm:p-8 font-grotesk" ref={viewRef}>
+    <div className="h-fit w-full flex items-center justify-center p-8 sm:p-8 font-grotesk" ref={viewRef}>
 
         {/* This is the single wrapper div. It has the ref for sizing and the box-shadow for the border.
       The HTMLFlipBook is its DIRECT child, which is why this works.
     */}
         <div
           ref={bookWrapperRef}
-          className="w-full max-w-5xl h-[80%] flex justify-center items-center shadow-[0_0_0_8px_#B9FF66,0_0_0_10px_#000] rounded-2xl"
+          className="w-full max-w-5xl h-[70vh] md:h-auto flex justify-center items-center shadow-[0_0_0_8px_#B9FF66,0_0_0_10px_#000] rounded-2xl"
         >
           {size.width > 0 && (
             <HTMLFlipBook

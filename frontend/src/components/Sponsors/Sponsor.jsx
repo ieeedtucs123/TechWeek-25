@@ -14,7 +14,7 @@ export default function Sponsor() {
     ));
 
     return (
-        <section className="w-full py-12 font-grotesk bg-white">
+        <section className="w-full md:py-12 font-grotesk bg-white">
             <div className="max-w-6xl mx-auto px-4">
                 {/* ## 1. Added Sponsors Heading ## */}
                 <h2 className="text-center text-2xl font-bold text-gray-700 mb-8">
