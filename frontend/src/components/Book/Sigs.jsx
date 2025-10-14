@@ -1,20 +1,49 @@
 import React, { useState, useEffect, useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
 import { useInView } from "react-intersection-observer"; // You may need to install this: npm install react-intersection-observer
-
+import dsa from "../../../public/dsa.jpg"
+import ML from "../../../public/ML.jpg"
+import design from "../../../public/design.jpg"
+import CP from "../../../public/CP.jpg"
+import electronics from "../../../public/electronics.jpg"
+import genAI from "../../../public/genAI.jpg"
+import nontech from "../../../public/nontech.jpg"
+import development from "../../../public/development.jpg"
+import robotics from "../../../public/robotics.jpg"
+import bgImage from "../../../public/page.svg"
+import cover from "../../../public/cover.svg"
 // A reusable Page component for the main content.
-const Page = React.forwardRef(({ sigName, description, imageUrl }, ref) => {
+const Page = React.forwardRef(({ sigName, description, imageUrl, style }, ref) => {
   return (
-    <div className="page bg-white p-6 shadow-inner flex flex-col h-full" ref={ref}>
-      <h2 className="text-xl font-bold text-gray-800 pb-3 mb-4 border-b border-gray-200">
-        {sigName}
-      </h2>
-      <p className="text-sm text-gray-700 leading-relaxed mb-4">{description}</p>
-      <div className="flex-grow flex items-center justify-center bg-gray-50 rounded-lg overflow-hidden border border-dashed border-gray-200 mb-6">
+    <div className="page p-6 shadow-inner flex flex-col h-full overflow-hidden  bg-contain bg-no-repeat bg-center" ref={ref} style={{...style,  backgroundImage: "url('/page.svg')",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+        }}
+      
+        >
+      {/* Top section: Title and Description */}
+      <div>
+        <h2 className="text-xl font-bold text-gray-800 pb-3 mb-4 border-b border-gray-200 truncate">
+          {sigName}
+        </h2>
+        <p className="text-sm text-gray-700 leading-relaxed mb-4 h-20 overflow-auto">
+          {description}
+        </p>
+      </div>
+
+      {/* Middle section: Image (This will grow to fill available space) */}
+    <div className="w-full flex-shrink-0 h-40 bg-gray-50 overflow-hidden">
         {imageUrl ? (
-          <img src={imageUrl} alt={sigName} className="object-cover w-full h-full" />
+          <img
+            src={imageUrl}
+            alt={sigName}
+            className="w-full h-full object-cover"
+          />
         ) : (
-          <span className="text-gray-400 text-xs">Image Section</span>
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="text-gray-400 text-xs">Image Not Available</span>
+          </div>
         )}
       </div>
       <div className="mt-auto flex flex-row gap-3">
@@ -26,25 +55,58 @@ const Page = React.forwardRef(({ sigName, description, imageUrl }, ref) => {
   );
 });
 
-// A simple component for the front cover.
+// --- COVER PAGE (Updated for Full Height) ---
 const CoverPage = React.forwardRef((props, ref) => {
-    return (
-      <div className="page bg-slate-100 p-6 flex flex-col items-center justify-center shadow-lg" ref={ref}>
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 text-center">SIGs Handbook</h1>
-        <p className="text-gray-600 mt-4 text-center">Explore Our Communities</p>
-      </div>
-    );
+  return (
+    <div
+      ref={ref}
+      style={props.style}
+      className="page h-full bg-black flex flex-col items-center justify-center text-center relative overflow-hidden rounded-xl border-y border-gray-200"
+    >
+      {/* Lime Side Borders */}
+      <div />
+      <div  />
+
+      {/* Soft Lime Glow */}
+      <div className="absolute w-[260px] mt-[30%] mx-[20%] h-[260px] bg-[#B9FF66]/25 rounded-full blur-3xl"></div>
+
+      {/* Centered Text */}
+      <h1 className="text-5xl mt-[45%] font-semibold text-[#B9FF66]/60 z-10">
+        SIGs Handbook
+      </h1>
+      <p className="text-gray-200 mt-3 text-lg z-10">
+        Explore Our Communities
+      </p>
+    </div>
+  );
 });
 
-// A simple component for the back cover.
+// --- BACK PAGE (Updated for Full Height) ---
 const BackPage = React.forwardRef((props, ref) => {
-    return (
-      <div className="page bg-slate-100 p-6 flex flex-col items-center justify-center shadow-lg" ref={ref}>
-        <h2 className="text-2xl font-bold text-gray-800">Find Your Passion</h2>
-        <p className="text-gray-600 mt-2">Join a SIG Today!</p>
-      </div>
-    );
+  return (
+    <div
+      ref={ref}
+      style={props.style}
+      className="page h-full bg-black flex flex-col items-center justify-center text-center relative overflow-hidden rounded-xl border-y border-gray-200"
+    >
+      {/* Lime Side Borders */}
+      <div />
+      <div />
+
+      {/* Subtle Background Glow */}
+      <div className="absolute w-[260px] mt-[30%] mx-[20%] h-[260px] bg-[#B9FF66]/25 rounded-full blur-3xl"></div>
+
+      {/* Centered Text */}
+      <h2 className="text-3xl mt-[45%] font-semibold text-[#B9FF66]/60 z-10">
+        Find Your Passion
+      </h2>
+      <p className="text-gray-200 mt-2 z-10 text-base">
+        Join a SIG and start your journey.
+      </p>
+    </div>
+  );
 });
+
 
 
 // Main component that holds the book
@@ -98,10 +160,15 @@ export default function Sigs() {
   }, [hasFlippedOnce]);
 
   const sigsData = [
-    { name: "AI & Machine Learning", description: "Explore artificial intelligence, deep learning, and neural networks. Join us for workshops and projects.", imageUrl: "https://picsum.photos/seed/ai/400/200" },
-    { name: "Cybersecurity", description: "Dive into ethical hacking, network security, and cryptography. A community passionate about protecting digital info.", imageUrl: "https://picsum.photos/seed/cyber/400/200" },
-    { name: "Web Development", description: "From modern frontend frameworks like React to powerful backend tech, we cover the full stack.", imageUrl: "https://picsum.photos/seed/webdev/400/200" },
-    { name: "Game Development", description: "Join fellow creators to design and build video games. We work with engines like Unity and explore all aspects of game design.", imageUrl: "https://picsum.photos/seed/gamedev/400/200" },
+    { sigName: "Machine Learning", description: "A branch of AI where systems learn patterns from data to make predictions or decisions.", imageUrl:ML },
+    { sigName: "DSA", description: "Organizing data efficiently and designing step-by-step computational solutions.", imageUrl: dsa },
+    { sigName: "Development and DevOps", description: "Creating software applications and managing their deployment and maintenance..", imageUrl: development },
+    { sigName: "Robotics", description: "Designing and programming machines that can perform automated tasks.", imageUrl: robotics },
+     { sigName: "Analytics and management ", description: "Studying data to make informed business or technical decisions..", imageUrl: nontech },
+      { sigName: "Into to Competitive Programming", description: "Solving algorithmic and coding problems efficiently under time constraints.", imageUrl: CP },
+       { sigName: "Electronics and Embedded Systems", description: "Building and programming circuits and small computing devices.", imageUrl:electronics },
+        { sigName: "Generative AI", description: "AI techniques that create new content like text, images, or music", imageUrl: genAI },
+         { sigName: "Design", description: "Crafting visual and interactive elements for usability and aesthetics.", imageUrl:design },
   ];
 
   return (
@@ -123,7 +190,7 @@ export default function Sigs() {
         {/* This is the single wrapper div. It has the ref for sizing and the box-shadow for the border.
       The HTMLFlipBook is its DIRECT child, which is why this works.
     */}
-        <div
+       <div
           ref={bookWrapperRef}
           className="w-full max-w-5xl h-[70vh] md:h-auto flex justify-center items-center shadow-[0_0_0_8px_#B9FF66,0_0_0_10px_#000] rounded-2xl"
         >
