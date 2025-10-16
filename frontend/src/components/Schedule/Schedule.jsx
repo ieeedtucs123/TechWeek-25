@@ -1,6 +1,6 @@
 
-import Arrow4 from '/Arrow 4.svg';
-import Arrow5 from '/Arrow 5.svg';
+import Arrow4 from '/Schedule/Arrow 4.svg';
+import Arrow5 from '/Schedule/Arrow 5.svg';
 export default function Schedule() {
   return (
     <div className="w-full font-grotesk bg-white py-28 px-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
