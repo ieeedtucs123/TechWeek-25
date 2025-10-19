@@ -1,5 +1,3 @@
-import React from "react";
-import Sponsor from "./Sponsors/Sponsor";
 
 export default function Home() {
   return (
@@ -44,9 +42,11 @@ export default function Home() {
                 className="w-48 sm:w-64 md:w-80 lg:w-full max-w-md lg:max-w-lg xl:max-w-xl animate-float"
               />
             </div>
+
           </div>
           {/* <div><Sponsor></Sponsor></div> */}
         </div>
+        
         
       </section>
       

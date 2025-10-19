@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
+import SubscribeButton from "../../utils/subscribe";
 import { useInView } from "react-intersection-observer";
 
 const Page = React.forwardRef(({ sigName, description, imageUrl, style }, ref) => {
@@ -44,9 +45,8 @@ const Page = React.forwardRef(({ sigName, description, imageUrl, style }, ref) =
         <button className="w-full bg-[#B9FF66] text-gray-900 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-lime-400 transition">
           Join Group
         </button>
-        <button className="w-full bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition">
-          Get Notified
-        </button>
+        <SubscribeButton styleprop="w-full bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition" content="Get Notified" />
+        
       </div>
     </div>
   );

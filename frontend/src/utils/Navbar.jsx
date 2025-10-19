@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import SubscribeButton from "../utils/subscribe";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,9 +76,7 @@ export default function Navbar() {
               </a>
             ))}
             <div className="pt-5">
-              <button className="w-full px-8 py-3 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 font-semibold text-base">
-                Get Notified
-              </button>
+              <SubscribeButton styleprop="w-full px-8 py-3 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 font-semibold text-base" content="Get Notified" />
             </div>
           </div>
         </div>
