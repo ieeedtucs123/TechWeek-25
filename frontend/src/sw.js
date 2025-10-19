@@ -18,7 +18,7 @@ self.addEventListener('push', event => {
 
   // Try to read the data as text first
   try {
-      rawDataText = event.data.text();
+      rawDataText = event.message.text();
   } catch (e) {
       console.error('Failed to read push data as text:', e);
       rawDataText = 'Could not read push data.'; // Fallback text
@@ -33,15 +33,16 @@ self.addEventListener('push', event => {
     data = {
       title: 'Notification', // Default title
       body: rawDataText,     // Use the raw text as the body
-      icon: '/pwa-192x192.png' // Default icon
+      icon: '/pwa-512x512.png' // Default icon
     };
   }
 
   // Prepare notification options using the parsed or fallback data
   const options = {
-    body: data.body || 'No body provided', // Add fallback for body
-    icon: data.icon || '/pwa-192x192.png', // Fallback icon
-    badge: '/logoIcon.svg'
+    body: data.message || 'No body provided', // Add fallback for body
+    icon: data.icon || '/pwa-512x512.png', // Fallback icon
+    badge: '/logoIcon.svg',
+    sound: '/notification-sound.mp3'
   };
   const title = data.title || 'Notification Received'; // Fallback title
 

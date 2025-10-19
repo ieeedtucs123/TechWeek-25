@@ -55,12 +55,19 @@ export default function SubscribeButton({styleprop, content}) {
     }
   };
 
-  return (
+const [loading, setLoading] = React.useState(false);
+
+return (
     <button 
-      onClick={handleSubscribe} 
-      className= {styleprop}
+        onClick={async () => {
+            setLoading(true);
+            await handleSubscribe();
+            setLoading(false);
+        }} 
+        className={styleprop}
+        disabled={loading}
     >
-      {content}
+        {loading ? "Subscribing..." : content}
     </button>
-  );
+);
 }
