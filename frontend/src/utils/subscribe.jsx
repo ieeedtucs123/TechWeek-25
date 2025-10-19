@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function SubscribeButton({styleprop, content}) {
   const PUBLIC_VAPID_KEY = import.meta.env.VITE_PUBLIC_VAPID_KEY;
 
@@ -55,7 +57,7 @@ export default function SubscribeButton({styleprop, content}) {
     }
   };
 
-const [loading, setLoading] = React.useState(false);
+const [loading, setLoading] = useState(false);
 
 return (
     <button 
