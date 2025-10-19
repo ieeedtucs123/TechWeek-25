@@ -18,7 +18,7 @@ self.addEventListener('push', event => {
 
   // Try to read the data as text first
   try {
-      rawDataText = event.message.text();
+      rawDataText = event.data.text();
   } catch (e) {
       console.error('Failed to read push data as text:', e);
       rawDataText = 'Could not read push data.'; // Fallback text
