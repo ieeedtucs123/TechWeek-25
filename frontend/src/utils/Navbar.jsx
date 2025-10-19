@@ -46,9 +46,7 @@ export default function Navbar() {
 
         {/* Desktop Button */}
         <div className="hidden lg:block">
-          <button className="px-8 py-3 font-grotesk border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 font-semibold text-base md:text-lg">
-            Get Notified
-          </button>
+          <SubscribeButton styleprop="px-8 py-3 font-grotesk border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 font-semibold text-base md:text-lg" content="Get Notified" />
         </div>
 
         {/* Mobile Toggle */}

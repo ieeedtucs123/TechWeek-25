@@ -30,7 +30,8 @@ self.addEventListener('push', event => {
     data = {
       title: 'Notification',
       message: rawDataText, // ✅ Corrected key here
-      icon: '/pwa-512x512.png'
+      icon: '/pwa-512x512.png',
+      sound: '/notification-sound.mp3'
     };
   }
 
