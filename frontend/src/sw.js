@@ -13,40 +13,35 @@ self.addEventListener('activate', () => {
 
 // Push event listener with robust data handling
 self.addEventListener('push', event => {
-  let data = {}; // Default empty object
-  let rawDataText = ''; // Variable to store raw text
+  let data = {};
+  let rawDataText = '';
 
-  // Try to read the data as text first
   try {
       rawDataText = event.data.text();
   } catch (e) {
       console.error('Failed to read push data as text:', e);
-      rawDataText = 'Could not read push data.'; // Fallback text
+      rawDataText = 'Could not read push data.';
   }
 
-  // Now, try to parse the text as JSON
   try {
     data = JSON.parse(rawDataText);
   } catch (e) {
     console.warn('Push data was not valid JSON, using raw text:', rawDataText);
-    // If JSON parsing fails, create a default data object
     data = {
-      title: 'Notification', // Default title
-      body: rawDataText,     // Use the raw text as the body
-      icon: '/pwa-512x512.png' // Default icon
+      title: 'Notification',
+      message: rawDataText, // ✅ Corrected key here
+      icon: '/pwa-512x512.png'
     };
   }
 
-  // Prepare notification options using the parsed or fallback data
   const options = {
-    body: data.message || 'No body provided', // Add fallback for body
-    icon: data.icon || '/pwa-512x512.png', // Fallback icon
+    body: data.message || 'No message provided', // Now this will find the message
+    icon: data.icon || '/pwa-512x512.png',
     badge: '/logoIcon.svg',
     sound: '/notification-sound.mp3'
   };
-  const title = data.title || 'Notification Received'; // Fallback title
+  const title = data.title || 'Notification Received';
 
-  // Show the notification
   event.waitUntil(
     self.registration.showNotification(title, options)
   );
