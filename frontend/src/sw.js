@@ -3,14 +3,14 @@ import { precacheAndRoute } from 'workbox-precaching'
 // ✅ Handle precaching by Workbox
 precacheAndRoute(self.__WB_MANIFEST)
 
-// Log install & activation
-self.addEventListener('install', () => {
-  console.log('✅ Service Worker installed.')
-})
+// // Log install & activation
+// self.addEventListener('install', () => {
+//   console.log('✅ Service Worker installed.')
+// })
 
-self.addEventListener('activate', () => {
-  console.log('🚀 Service Worker activated.')
-})
+// self.addEventListener('activate', () => {
+//   console.log('🚀 Service Worker activated.')
+// })
 
 // ✅ Push event listener
 self.addEventListener('push', event => {

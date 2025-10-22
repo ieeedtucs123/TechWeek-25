@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="w-full font-grotesk h-screen flex flex-row items-center justify-center bg-white relative overflow-hidden fontmain pt-20 sm:pt-24 lg:pt-28">
+      <section className="w-full font-grotesk h-screen flex flex-row items-center justify-center bg-white relative overflow-hidden font-main pt-20 sm:pt-24 lg:pt-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
           <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-6 lg:gap-12 h-full">
             {/* Left Content */}

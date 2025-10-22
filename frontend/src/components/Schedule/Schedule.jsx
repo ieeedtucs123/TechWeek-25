@@ -3,7 +3,7 @@ import Arrow4 from '/Schedule/Arrow 4.svg';
 import Arrow5 from '/Schedule/Arrow 5.svg';
 export default function Schedule() {
   return (
-    <div className="w-full font-grotesk bg-white py-28 px-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+    <div className="w-full font-grotesk bg-white py-24 px-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 sm:mb-12">
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 mb-4">
@@ -98,7 +98,7 @@ export default function Schedule() {
           </div>
 
         {/* --- Right Column: The Image --- */}
-        <div className="h-[97.88px] lg:w-[370px] md:w-[300px] sm:w-[240px] w-[150px] h-[35.8px]">
+        <div className="h-[97.88px] lg:w-[370px] md:w-[300px] sm:w-[240px] w-[150px]">
           <img src={Arrow4} alt="Timeline Connector" className="w-full h-auto relative translate-y-[69px] lg:translate-y-[20px] lg:translate-x-[0px] md:translate-y-[30px] sm:translate-y-[47px]" />
         </div>
 
@@ -115,7 +115,7 @@ export default function Schedule() {
               <div className="mb-3">
                 <span 
                   className="inline-block px-2 font-medium bg-[#B9FF66] text-black text-[17px] lg:text-[26px] sm:text-[20px] md:text-[21px] leading-tight">
-                    Data Analytics, WebDev
+                    WebDev, Data Analytics
                 </span>
               </div>
               <div>

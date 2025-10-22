@@ -1,36 +1,41 @@
-import React from 'react';
+import React from "react";
 
-// Use a default export for easier importing
 export default function Sponsor() {
-    
-    // The list of logos is duplicated to create the seamless scroll effect
-    const logos = [...Array(8)].map((_, idx) => (
-        <img
-            key={idx}
-            src={"/logo.svg"} // Assuming logo.svg is in your public folder
-            alt={`Sponsor logo ${idx + 1}`}
-            className="h-14 object-contain" // Use Tailwind classes for styling
-        />
-    ));
+  return (
+    <section className="w-full pt-12 font-grotesk bg-white">
+      <div className="max-w-6xl mx-auto px-4 text-center">
+        <h2 className="text-2xl font-bold text-gray-700 mb-8">Powered by</h2>
 
-    return (
-        <section className="w-full md:py-12 font-grotesk bg-white">
-            <div className="max-w-6xl mx-auto px-4">
-                {/* ## 1. Added Sponsors Heading ## */}
-                <h2 className="text-center text-2xl font-bold text-gray-700 mb-8">
-                    Our Sponsors
-                </h2>
+      
+        <div className="relative flex border-[#00000036] border-2 p-4 items-center justify-center w-full overflow-hidden">
+         
+          <div className="absolute top-1/2 left-0 w-full h-[7px] rounded-3xl bg-gray-300 overflow-hidden">
+            <div className="w-full h-full bg-gradient-to-r from-transparent via-[#B9FF66] to-transparent animate-line" />
+          </div>
 
-                {/* This is the container that hides the overflow */}
-                <div className="group w-full overflow-hidden">
-                    <div 
-                        className="flex items-center gap-20 md:gap-60 sm:gap-20 animate-scroll group-hover:pause"
-                    >
-                        {/* ## 2. The loop is now perfect because it's CSS-driven ## */}
-                        {logos}
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+          {/* Center logo */}
+          <div className="relative bg-white px-6 z-10">
+            <img
+              src="https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/branding-guidelines/logos/blue/Unstop-Logo-Blue.svg"
+              alt="Unstop Logo"
+              className="h-10 object-contain"
+            />
+          </div>
+        </div>
+      </div>
+
+      <style>
+        {`
+        @keyframes moveLine {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+
+        .animate-line {
+          animation: moveLine 2s linear infinite;
+        }
+        `}
+      </style>
+    </section>
+  );
 }

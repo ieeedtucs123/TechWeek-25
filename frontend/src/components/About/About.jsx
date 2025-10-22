@@ -7,7 +7,7 @@ export default function About() {
   };
 
   return (
-    <section className="bg-white sm:py-12 lg:py-24 px-4 sm:px-6 lg:px-8 mt-24 font-grotesk">
+    <section className="bg-white sm:py-12 lg:py-24 px-4 sm:px-6 lg:px-8 mt-12 font-grotesk">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-8 sm:mb-12">
@@ -53,7 +53,7 @@ export default function About() {
               href="http://ieeedtu.in" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-3 bg-transparent text-[#191A23] px-0 py-2 hover:opacity-80 transition-opacity mt-auto"
+              className="flex items-center gap-3 bg-transparent text-[#191A23] px-0  hover:opacity-80 transition-opacity "
             >
               <div className="relative w-10 h-10 flex items-center justify-center">
                 <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute">

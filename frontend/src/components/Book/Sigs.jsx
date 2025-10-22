@@ -109,16 +109,21 @@ export default function Sigs() {
   }, []);
 
   const sigsData = [
-    { sigName: "Machine Learning", description: "A branch of AI where systems learn patterns from data to make predictions or decisions.", imageUrl: "/Sigs/ML.jpg" },
-    { sigName: "DSA", description: "Organizing data efficiently and designing step-by-step computational solutions.", imageUrl: "/Sigs/dsa.jpg" },
-    { sigName: "Development and DevOps", description: "Creating software applications and managing their deployment and maintenance.", imageUrl: "/Sigs/development.jpg" },
-    { sigName: "Robotics", description: "Designing and programming machines that can perform automated tasks.", imageUrl: "/Sigs/robotics.jpg" },
-    { sigName: "Analytics and Management", description: "Studying data to make informed business or technical decisions.", imageUrl: "/Sigs/nontech.jpg" },
-    { sigName: "Intro to Competitive Programming", description: "Solving algorithmic and coding problems efficiently under time constraints.", imageUrl: "/Sigs/CP.jpg" },
-    { sigName: "Electronics and Embedded Systems", description: "Building and programming circuits and small computing devices.", imageUrl: "/Sigs/electronics.jpg" },
-    { sigName: "Generative AI", description: "AI techniques that create new content like text, images, or music.", imageUrl: "/Sigs/genAI.jpg" },
-    { sigName: "Design", description: "Crafting visual and interactive elements for usability and aesthetics.", imageUrl: "/Sigs/design.jpg" },
-  ];
+     { sigName: "DSA", description: "Organizing data efficiently and designing step-by-step computational solutions.", imageUrl: "Sigs/dsa.jpg" },
+     { sigName: "Robotics", description: "Designing and programming machines that can perform automated tasks.", imageUrl: "Sigs/robotics.jpg" },
+
+        { sigName: "Cyber", description: "Cybersecurity is the practice of protecting computers, networks, and data from unauthorized access, attacks, or damage.", imageUrl: "Sigs/cyber.jpeg" },
+
+      { sigName: "Into to Competitive Programming", description: "Solving algorithmic and coding problems efficiently under time constraints.", imageUrl: "Sigs/CP.jpg" },
+      { sigName: "Electronics and Embedded Systems", description: "Building and programming circuits and small computing devices.", imageUrl:"Sigs/electronics.jpg" },
+
+    { sigName: "Development and DevOps", description: "Creating software applications and managing their deployment and maintenance..", imageUrl:"/Sigs/development.jpg" },
+     { sigName: "Analytics and management ", description: "Studying data to make informed business or technical decisions..", imageUrl:"/Sigs/nontech.jpg" },
+
+
+         { sigName: "Design", description: "Crafting visual and interactive elements for usability and aesthetics.", imageUrl:"/Sigs/design.jpg" },
+           { sigName: "Machine Learning", description: "A branch of AI where systems learn patterns from data to make predictions or decisions.", imageUrl:"/Sigs/genAI.jpg" },
+];
 
   return (
     <>
