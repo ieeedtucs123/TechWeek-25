@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Sponsor() {
   return (
-    <section className="w-full pt-12 font-grotesk bg-white">
+    <section className="w-full font-grotesk bg-white">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-2xl font-bold text-gray-700 mb-8">Powered by</h2>
 
