@@ -7,7 +7,7 @@ export default function About() {
   };
 
   return (
-    <section className="bg-white sm:py-12 lg:py-24 px-4 sm:px-6 lg:px-8 mt-12 font-grotesk">
+    <section className="bg-white py-12 sm:py-12 lg:py-24 px-4 sm:px-6 lg:px-8 mt-24 [@media(min-width:500px)]:mt-12 font-grotesk">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-8 sm:mb-12">

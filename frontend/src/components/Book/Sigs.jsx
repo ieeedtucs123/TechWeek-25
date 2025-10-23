@@ -129,7 +129,7 @@ export default function Sigs() {
     <>
       {/* Header */}
       <div className="max-w-6xl mx-auto font-grotesk">
-        <div className="my-10 pt-24 sm:mb-12 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className=" sm:mb-12 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
             <span className="inline-block mb-5 bg-[#B9FF66] text-[#191A23] font-bold px-6 py-3 rounded-md text-2xl sm:text-3xl sm:mb-0 w-fit">
               About SIGs
