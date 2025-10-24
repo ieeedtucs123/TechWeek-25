@@ -3,7 +3,7 @@ import HTMLFlipBook from "react-pageflip";
 import SubscribeButton from "../../utils/subscribe";
 import { useInView } from "react-intersection-observer";
 
-const Page = React.forwardRef(({ sigName, description, imageUrl, style }, ref) => {
+const Page = React.forwardRef(({ sigName, description, imageUrl, whatsappLink, style }, ref) => {
   return (
     <div
       ref={ref}
@@ -42,12 +42,19 @@ const Page = React.forwardRef(({ sigName, description, imageUrl, style }, ref) =
       </div>
 
       <div className="mt-auto flex pt-2 flex-row gap-3">
-        <button className="w-full bg-[#B9FF66] text-gray-900 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-lime-400 transition">
-          Join Group
-        </button>
-        <SubscribeButton styleprop="w-full bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition" content="Get Notified" />
-        
-      </div>
+  <a
+    href={whatsappLink}
+    target="_blank"
+    className="w-full text-center bg-[#B9FF66] text-gray-900 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-lime-400 transition"
+  >
+    Join Group
+  </a>
+
+  <SubscribeButton
+    styleprop="w-full bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition"
+    content="Get Notified"
+  />
+</div>
     </div>
   );
 });
@@ -108,22 +115,72 @@ export default function Sigs() {
     return () => window.removeEventListener("resize", updateSize);
   }, []);
 
-  const sigsData = [
-     { sigName: "DSA", description: "Organizing data efficiently and designing step-by-step computational solutions.", imageUrl: "Sigs/dsa.jpg" },
-     { sigName: "Robotics", description: "Designing and programming machines that can perform automated tasks.", imageUrl: "Sigs/robotics.jpg" },
-
-        { sigName: "Cyber", description: "Cybersecurity is the practice of protecting computers, networks, and data from unauthorized access, attacks, or damage.", imageUrl: "Sigs/cyber.jpeg" },
-
-      { sigName: "Into to Competitive Programming", description: "Solving algorithmic and coding problems efficiently under time constraints.", imageUrl: "Sigs/CP.jpg" },
-      { sigName: "Electronics and Embedded Systems", description: "Building and programming circuits and small computing devices.", imageUrl:"Sigs/electronics.jpg" },
-
-    { sigName: "Development and DevOps", description: "Creating software applications and managing their deployment and maintenance..", imageUrl:"/Sigs/development.jpg" },
-     { sigName: "Analytics and management ", description: "Studying data to make informed business or technical decisions..", imageUrl:"/Sigs/nontech.jpg" },
-
-
-         { sigName: "Design", description: "Crafting visual and interactive elements for usability and aesthetics.", imageUrl:"/Sigs/design.jpg" },
-           { sigName: "Machine Learning", description: "A branch of AI where systems learn patterns from data to make predictions or decisions.", imageUrl:"/Sigs/genAI.jpg" },
+const sigsData = [
+  {
+    sigName: "DSA",
+    description:
+      "Organizing data efficiently and designing step-by-step computational solutions.",
+    imageUrl: "Sigs/dsa.jpg",
+    whatsappLink: "https://chat.whatsapp.com/D2fL9SU91zxBN139wzyolh?mode=wwt",
+  },
+  {
+    sigName: "Robotics",
+    description:
+      "Designing and programming machines that can perform automated tasks.",
+    imageUrl: "Sigs/robotics.jpg",
+    whatsappLink: "https://chat.whatsapp.com/DhKtgiE9Qct3yKzthk5YsC?mode=wwt",
+  },
+  {
+    sigName: "Cyber",
+    description:
+      "Cybersecurity is the practice of protecting computers, networks, and data from unauthorized access, attacks, or damage.",
+    imageUrl: "Sigs/cyber.jpeg",
+    whatsappLink: "https://chat.whatsapp.com/DaQCYCAYoxQH8neIu6wnPX?mode=wwt",
+  },
+  {
+    sigName: "Into to Competitive Programming",
+    description:
+      "Solving algorithmic and coding problems efficiently under time constraints.",
+    imageUrl: "Sigs/CP.jpg",
+    whatsappLink: "https://chat.whatsapp.com/GSeroYsJ49X9ne9XL38kNR?mode=wwt",
+  },
+  {
+    sigName: "Electronics and Embedded Systems",
+    description:
+      "Building and programming circuits and small computing devices.",
+    imageUrl: "Sigs/electronics.jpg",
+    whatsappLink: "https://chat.whatsapp.com/EC5aSWlzQtYHxME7dWNEPx?mode=wwt",
+  },
+  {
+    sigName: "Development and DevOps",
+    description:
+      "Creating software applications and managing their deployment and maintenance.",
+    imageUrl: "/Sigs/development.jpg",
+    whatsappLink: "https://chat.whatsapp.com/G3nMzUtiGonCImFYwEmDAV?mode=wwt",
+  },
+  {
+    sigName: "Analytics and management",
+    description:
+      "Studying data to make informed business or technical decisions.",
+    imageUrl: "/Sigs/nontech.jpg",
+    whatsappLink: "https://chat.whatsapp.com/FX41h7GNM2V17szvuk2hpS?mode=wwt",
+  },
+  {
+    sigName: "Design",
+    description:
+      "Crafting visual and interactive elements for usability and aesthetics.",
+    imageUrl: "/Sigs/design.jpg",
+    whatsappLink: "https://chat.whatsapp.com/KOZgHe5kOgeAJvhspcOWSa?mode=wwt",
+  },
+  {
+    sigName: "Machine Learning",
+    description:
+      "A branch of AI where systems learn patterns from data to make predictions or decisions.",
+    imageUrl: "/Sigs/genAI.jpg",
+    whatsappLink: "https://chat.whatsapp.com/BxMtAk6EsMTGhI6iw6FlvM?mode=wwt",
+  },
 ];
+
 
   return (
     <>
