@@ -27,7 +27,7 @@ export default function Home() {
                 technologies. Join us and become a tech trailblazer!
               </p>
 
-              <a href="https://ieeedtu.in" target="blank" className="mt-4 w-full sm:w-auto">
+              <a href="https://unstop.com/p/techweek-2k25-dtu-new-delhi-1578416" target="blank" className="mt-4 w-full sm:w-auto">
                 <button className="w-full sm:w-auto px-5 sm:px-6 py-2 sm:py-3 bg-gray-900 text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-black transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
                   Register Now
                 </button>
