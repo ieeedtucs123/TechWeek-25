@@ -131,35 +131,35 @@ const sigsData = [
     whatsappLink: "https://chat.whatsapp.com/DhKtgiE9Qct3yKzthk5YsC?mode=wwt",
   },
   {
-    sigName: "Cyber",
+    sigName: "Cybersecurity",
     description:
       "Cybersecurity is the practice of protecting computers, networks, and data from unauthorized access, attacks, or damage.",
     imageUrl: "Sigs/cyber.jpeg",
     whatsappLink: "https://chat.whatsapp.com/DaQCYCAYoxQH8neIu6wnPX?mode=wwt",
   },
   {
-    sigName: "Into to Competitive Programming",
+    sigName: "Intro to Competitive Programming",
     description:
       "Solving algorithmic and coding problems efficiently under time constraints.",
     imageUrl: "Sigs/CP.jpg",
     whatsappLink: "https://chat.whatsapp.com/GSeroYsJ49X9ne9XL38kNR?mode=wwt",
   },
   {
-    sigName: "Electronics and Embedded Systems",
+    sigName: "Electronics and Chip Fabrication",
     description:
       "Building and programming circuits and small computing devices.",
     imageUrl: "Sigs/electronics.jpg",
     whatsappLink: "https://chat.whatsapp.com/EC5aSWlzQtYHxME7dWNEPx?mode=wwt",
   },
   {
-    sigName: "Development and DevOps",
+    sigName: "Web/App Development",
     description:
       "Creating software applications and managing their deployment and maintenance.",
     imageUrl: "/Sigs/development.jpg",
     whatsappLink: "https://chat.whatsapp.com/G3nMzUtiGonCImFYwEmDAV?mode=wwt",
   },
   {
-    sigName: "Analytics and management",
+    sigName: "Analytics and Consulting",
     description:
       "Studying data to make informed business or technical decisions.",
     imageUrl: "/Sigs/nontech.jpg",
